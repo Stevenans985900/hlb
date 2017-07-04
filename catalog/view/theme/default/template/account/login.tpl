@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-   <!-- Mirrored from light.pinsupreme.com/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 19 May 2017 06:01:50 GMT -->
+  
    <head>
       <title>Login - HALOBIG</title>
       <meta charset="utf-8">
