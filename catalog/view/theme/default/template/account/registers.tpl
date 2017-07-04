@@ -10,7 +10,7 @@
 <meta name="author" content="Mackayshieldslife">
 
 
-<title>Tạo tài khoản - Tâm An Viêt </title>
+<title>Register - HALOBIG </title>
 
 <!-- FAVICON -->
 <link rel="icon" href="catalog/view/theme/default/images/logo_icon.png">
