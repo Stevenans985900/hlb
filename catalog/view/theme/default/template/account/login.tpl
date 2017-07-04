@@ -41,7 +41,7 @@
                </div>
 
                <div class="form-group">
-                  <div  class="g-recaptcha" data-sitekey="6Lcm_iIUAAAAAJGRhY09TEmAX01wTF3_8mkZRJQF"></div>
+                  <div class="g-recaptcha" data-sitekey="6LdC1ScUAAAAAEgITftdhE4mnudcN_U-pUVUp46I"></div>
 
                </div>
                <div class="buttons-w">
