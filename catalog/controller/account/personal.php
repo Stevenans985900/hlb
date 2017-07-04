@@ -381,6 +381,8 @@ public function checkBinary($p_binary){
 			$this -> session -> data['token_crt'] = hexdec( crc32(rand()) );
 
 			$check_p_binary = $this -> model_account_customer -> check_p_binary($this->request->post['p_binary']);
+			$customer_binary = $this -> model_account_customer -> getCustomer_ML($this->request->post['p_binary']);
+			!$customer_binary || $customer_binary['level'] == 1 && die('Error');
 			$checkcmnd = $this -> checkcmnd($_POST['cmnd']);
 			if (intval($checkcmnd) == 1) {
 				die('The Citizenship card/passport no field is required ');

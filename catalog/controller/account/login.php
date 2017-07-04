@@ -334,55 +334,55 @@ class ControllerAccountLogin extends Controller {
 
 		/*cap cha google*/
 
-		$api_url     = 'https://www.google.com/recaptcha/api/siteverify';
-		$site_key    = '6Ldi0ScUAAAAAGcMG7iGL3_PD7tWYzKRLO6VfRwr';
-		$secret_key  = '6Ldi0ScUAAAAAINFw3fXwPC9z_rcs7YMDA24W2CT';
-		if (!$_POST['g-recaptcha-response']) 
-		{
-			if ($_SERVER['REMOTE_ADDR'] != '127.0.0.1')
-			{
-				$this->error['warning'] = "Error! Wrong captcha!";
-			}
-		} 
-		else
-		{
-		   	$site_key_post    = $_POST['g-recaptcha-response'];
-		   if (!empty($_SERVER['HTTP_CLIENT_IP'])) 
-		   	{
-		        $remoteip = $_SERVER['HTTP_CLIENT_IP'];
-		   	} 
-		   	elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) 
-		   	{
-		        $remoteip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-		   	} 
-		   	else 
-		   	{
-		        $remoteip = $_SERVER['REMOTE_ADDR'];
-		    }
+		// $api_url     = 'https://www.google.com/recaptcha/api/siteverify';
+		// $site_key    = '6Ldi0ScUAAAAAGcMG7iGL3_PD7tWYzKRLO6VfRwr';
+		// $secret_key  = '6Ldi0ScUAAAAAINFw3fXwPC9z_rcs7YMDA24W2CT';
+		// if (!$_POST['g-recaptcha-response']) 
+		// {
+		// 	if ($_SERVER['REMOTE_ADDR'] != '127.0.0.1')
+		// 	{
+		// 		$this->error['warning'] = "Error! Wrong captcha!";
+		// 	}
+		// } 
+		// else
+		// {
+		//    	$site_key_post    = $_POST['g-recaptcha-response'];
+		//    if (!empty($_SERVER['HTTP_CLIENT_IP'])) 
+		//    	{
+		//         $remoteip = $_SERVER['HTTP_CLIENT_IP'];
+		//    	} 
+		//    	elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) 
+		//    	{
+		//         $remoteip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+		//    	} 
+		//    	else 
+		//    	{
+		//         $remoteip = $_SERVER['REMOTE_ADDR'];
+		//     }
 
-		    $api_url = $api_url.'?secret='.$secret_key.'&response='.$site_key_post.'&remoteip='.$remoteip;
-		    $response = file_get_contents($api_url);
-		    $response = json_decode($response);
-		    if(!isset($response->success))
-		    {
-		        $json['captcha'] = -1;
-		    }
-		    if($response->success == true)
-		    {
-		        $json['captcha'] = 1;
-		    }
-		    else
-		    {
-		        $json['captcha'] = -1;
-		    }
-		    if (intval($json['captcha']) === -1) 
-		    {
-		    	if ($_SERVER['REMOTE_ADDR'] != '127.0.0.1')
-				{
-		       		$this->error['warning'] = "Error! Wrong captcha!";
-		       	}
-		   	}
-		}
+		//     $api_url = $api_url.'?secret='.$secret_key.'&response='.$site_key_post.'&remoteip='.$remoteip;
+		//     $response = file_get_contents($api_url);
+		//     $response = json_decode($response);
+		//     if(!isset($response->success))
+		//     {
+		//         $json['captcha'] = -1;
+		//     }
+		//     if($response->success == true)
+		//     {
+		//         $json['captcha'] = 1;
+		//     }
+		//     else
+		//     {
+		//         $json['captcha'] = -1;
+		//     }
+		//     if (intval($json['captcha']) === -1) 
+		//     {
+		//     	if ($_SERVER['REMOTE_ADDR'] != '127.0.0.1')
+		// 		{
+		//        		$this->error['warning'] = "Error! Wrong captcha!";
+		//        	}
+		//    	}
+		// }
 
 
 

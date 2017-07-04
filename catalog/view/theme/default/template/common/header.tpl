@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from www.g-axon.com/integral-3.0/dark/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Jun 2017 13:23:10 GMT -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">

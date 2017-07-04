@@ -42,7 +42,7 @@
 
                <div class="form-group">
                   <!-- <div class="g-recaptcha" data-sitekey="6LdC1ScUAAAAAEgITftdhE4mnudcN_U-pUVUp46I"></div> -->
-                  <div class="g-recaptcha" data-sitekey="6Ldi0ScUAAAAAGcMG7iGL3_PD7tWYzKRLO6VfRwr"></div>
+                  <!-- <div class="g-recaptcha" data-sitekey="6Ldi0ScUAAAAAGcMG7iGL3_PD7tWYzKRLO6VfRwr"></div> -->
                </div>
                <div class="buttons-w">
                   <button class="btn btn-primary">Đăng nhập</button>
