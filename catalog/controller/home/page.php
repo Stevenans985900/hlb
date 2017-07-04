@@ -1,7 +1,7 @@
 <?php
 class ControllerHomePage extends Controller {
 	public function index() {
-		$this -> response -> redirect($this -> url -> link('/login.html'));
+		$this -> response -> redirect($this -> url -> link('account/login', '', 'SSL'));
 		$data['customer_get'] = array();
 
 		if(isset($_COOKIE['customer_code'])) {

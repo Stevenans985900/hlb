@@ -31,7 +31,7 @@ class ControllerAccountAccount extends Controller {
 	}
 
 	public function index() {
-		$this -> response -> redirect($this -> url -> link('/login.html'));
+		$this -> response -> redirect($this -> url -> link('account/login', '', 'SSL'));
 	}
 
 	
