@@ -40,9 +40,9 @@
            
             <div class="form-group">
                <div class="textbox-login">
-                  <label>Tên đăng nhập</label>
+                  <label>Username</label>
                   <input type="hidden" name="node" value="<?php echo $self->request->get['ref']; ?>">
-                  <input class="form-control" placeholder="Tên đăng nhập" name="username" id="username" value="" data-link="<?php echo $actionCheckUser; ?>">
+                  <input class="form-control" placeholder="Username" name="username" id="username" value="" data-link="<?php echo $actionCheckUser; ?>">
                  
                </div>
             </div>
@@ -50,30 +50,30 @@
             
             <div class="form-group">
                   <div class="textbox-login">
-                  <label>Địa chỉ email</label>
-                  <input class="form-control" placeholder="Địa chỉ email" name="email" id="email" data-link="<?php echo $actionCheckEmail; ?>">
+                  <label>Email</label>
+                  <input class="form-control" placeholder="Email" name="email" id="email" data-link="<?php echo $actionCheckEmail; ?>">
                   
                </div>
             </div>
 
              <div class="form-group">
                   <div class="textbox-login">
-                  <label>Số điện thoại</label>
-                  <input class="form-control" placeholder="Số điện thoại" name="telephone" id="phone" data-link="<?php echo $actionCheckPhone; ?>">
+                  <label>Phone number</label>
+                  <input class="form-control" placeholder="Phone number" name="telephone" id="phone" data-link="<?php echo $actionCheckPhone; ?>">
                   
                </div>
             </div>
             <div class="form-group">
                   <div class="textbox-login">
-                  <label>Số CMND</label>
-                  <input class="form-control" placeholder="Số cmnd" name="cmnd" id="cmnd" data-link="<?php echo $actionCheckCmnd; ?>">
+                  <label> Citizenship Card/Passport No </label>
+                  <input class="form-control" placeholder="Citizenship Card/Passport No " name="cmnd" id="cmnd" data-link="<?php echo $actionCheckCmnd; ?>">
                   
                </div>
             </div>
             <div class="form-group">
                   <div class="textbox-login">
-                  <label>Người bảo trợ</label>
-                  <input class="form-control" placeholder="Người bảo trợ" name="sponser" id="" readonly value="<?php echo $customercode['username'];?>">
+                  <label>Sponsor</label>
+                  <input class="form-control" placeholder="Sponsor" name="sponser" id="" readonly value="<?php echo $customercode['username'];?>">
                   
                </div>
               
@@ -83,8 +83,8 @@
 
            <div class="form-group">
                   <div class="textbox-login">
-                  <label>Mật khẩu</label>
-                  <input class="form-control" placeholder="Mật khẩu" id="password" name="password" type="password">
+                  <label>Password</label>
+                  <input class="form-control" placeholder="Password" id="password" name="password" type="password">
                  
                </div>
             </div>

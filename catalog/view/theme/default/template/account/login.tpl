@@ -30,13 +30,13 @@
             <!-- <h4 class="auth-header">Đăng nhập tài khoản</h4> -->
             <form action="login.html" method="post" style="margin-top: 40px;">
                <div class="form-group">
-                  <label for="">Tên đăng nhập</label>
-                  <input class="form-control" name="email" value="<?php echo $email; ?>" placeholder="Nhập tên đăng nhập" type="text">
+                  <label for="">Username</label>
+                  <input class="form-control" name="email" value="<?php echo $email; ?>" placeholder="Username" type="text">
                   <div class="pre-icon os-icon os-icon-user-male-circle"></div>
                </div>
                <div class="form-group">
-                  <label for="">Mật khẩu</label>
-                  <input class="form-control" placeholder="Nhập mật khẩu" type="password" name="password" value="<?php echo $password; ?>">
+                  <label for="">Password</label>
+                  <input class="form-control" placeholder="Password" type="password" name="password" value="<?php echo $password; ?>">
                   <div class="pre-icon os-icon os-icon-fingerprint"></div>
                </div>
 
@@ -45,10 +45,10 @@
                   <!-- <div class="g-recaptcha" data-sitekey="6Ldi0ScUAAAAAGcMG7iGL3_PD7tWYzKRLO6VfRwr"></div> -->
                </div>
                <div class="buttons-w">
-                  <button class="btn btn-primary">Đăng nhập</button>
-                  <div class="form-check-inline"><label class="form-check-label"><input class="form-check-input" type="checkbox">Nhớ tài khoản</label></div>
+                  <button class="btn btn-primary">Login</button>
+                  <div class="form-check-inline"><label class="form-check-label"><input class="form-check-input" type="checkbox">Remember</label></div>
                </div>
-               <p><a href="forgot.html" style="margin-top: 6px; float: left;">Quên mật khẩu?</a></p>
+               <p><a href="forgot.html" style="margin-top: 6px; float: left;">Forgot Password?</a></p>
                <br>
                <div class="form-group">
                   <?php if ($redirect) { ?>
@@ -57,7 +57,7 @@
                   
                   <?php if ($success) { ?>
                   <div class="text-success"><i class="fa fa-check-circle"></i>
-                     Thông báo: mật khẩu mới đưuọc gửi đên email của bạn
+                     Notice: New password sent to your email
                   </div>
                   <?php } ?>
                   <?php if ($error_warning) { ?>
@@ -79,7 +79,7 @@
 
 <script type="text/javascript">
    if (location.hash === '#success') {
-      xhtml = '<div class="col-md-12"><p class=""><b>Xin chào <span style="color:#01aeef"><?php echo $_SESSION['fullname']; ?> </span>!</b></p><p class="">Cám ơn bạn đã đăng ký tài khoản tại Tâm An Việt chúng tôi<p><p>Vui lòng kiểm tra email để xem thông tin tài khoản</p><p class="">Chúng tôi cảm ơn bạn đã mở tài khoản tại Tâm An Việt. Xin vui lòng liên hệ với chúng tôi để được trợ giúp</p><p class="">Trân trọng </p><p class="">Tâm An Việt</p></div>';
+      xhtml = '<div class="col-md-12"><p class=""><b>Hello <span style="color:#01aeef"><?php echo $_SESSION['fullname']; ?> </span>!</b></p><p class="">Thank you for signing up for our Halobig account<p><p>Please check email to view account information</p><p class="">We thank you for opening an account at Halobig. Please contact us for assistance</p><p class="">Sincerely </p><p class="">HALOBIG</p></div>';
          alertify.alert(xhtml, function(){
           
            }); 

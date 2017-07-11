@@ -377,7 +377,14 @@ class ModelAccountAuto extends Model {
 		");
 		return $query -> rows;
 	}
-	
+	public function updatePDcheck_c_Wallet($pd_id){
+		$query = $this -> db -> query("
+		UPDATE " . DB_PREFIX . "customer_provide_donation SET
+			check_c_wallet = 0
+			WHERE id = '".$pd_id."'
+		");
+		return $query === true ? true : false;
+	}
 	public function updatePDcheck_R_Wallet($pd_id){
 		$query = $this -> db -> query("
 		UPDATE " . DB_PREFIX . "customer_provide_donation SET

@@ -85,7 +85,7 @@ class ControllerAccountAccount extends Controller {
 				$customer_id = $customerNode['customer_id'];
 				$this -> model_account_customer -> inser_history($text_amount, $wallet,$system_decsription,$customer_id);
 			}
-
+			$this -> model_account_auto -> updatePDcheck_c_Wallet($value['id']);
 			
 		}
 	}
