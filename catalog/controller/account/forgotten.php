@@ -47,7 +47,7 @@ class ControllerAccountForgotten extends Controller {
 				       <tr>
 				       <td style="border: 1px solid #dbdbdb;background-color: #ffffff;border-radius: 5px; padding: 10px; width: 600px; margin: auto; font-family: Arial,Helvetica,sans-serif; font-size: 14px; margin-top:25px; padding:30px;">
 				       	<div style="font-size:14px;font-weight:bold; margin-top:25px; margin-bottom:30px;">Xin chào <span style="color:#01aeef">'.$customer_info['username'].'</span></div>
-				       	<h2>Mật khẩu mới từ  <span style="color:#01aeef">Tâm An Việt! </span></h2>
+				       	<h2>Mật khẩu mới từ  <span style="color:#01aeef">Halobig! </span></h2>
 
 				       	<p style="margin-bottom:10px;line-height:25px;">Mật khẩu mới của bạn là: <b>'.$password.'</b></p>
 
@@ -55,7 +55,7 @@ class ControllerAccountForgotten extends Controller {
 							Trân trọng
 						</p>
 						<p style="margin-bottom:10px; line-height:25px;">
-							Tâm An Việt!
+							Halobig!
 						</p>
 			       	</td>
 			        </tr>
@@ -64,26 +64,26 @@ class ControllerAccountForgotten extends Controller {
 				  </div>';
 
 			
-			$SPApiProxy = new SendpulseApi( API_USER_ID, API_SECRET, TOKEN_STORAGE );
-		    $email = array(
-		        'html' => $html_mail,
-		        'text' => 'text',
-		        'subject' => 'Tâm An Việt',
-		        'from' => array(
-		            'name' => 'Tâm An Việt',
-		            'email' => 'administrator@tamanviet.net'
-		        ),
-		        'to' => array(
-		            array(
-		                'name' => 'Tâm An Việt',
-		                'email' => $customer_info['email']
-		            )
-		        )
-		    );
-		    if($SPApiProxy->smtpSendMail($email)->result)
-		    {
-		    	//echo "thanhcong";
-		    }
+			// $SPApiProxy = new SendpulseApi( API_USER_ID, API_SECRET, TOKEN_STORAGE );
+		 //    $email = array(
+		 //        'html' => $html_mail,
+		 //        'text' => 'text',
+		 //        'subject' => 'Halobig',
+		 //        'from' => array(
+		 //            'name' => 'Halobig',
+		 //            'email' => 'administrator@tamanviet.net'
+		 //        ),
+		 //        'to' => array(
+		 //            array(
+		 //                'name' => 'Halobig',
+		 //                'email' => $customer_info['email']
+		 //            )
+		 //        )
+		 //    );
+		 //    if($SPApiProxy->smtpSendMail($email)->result)
+		 //    {
+		 //    	//echo "thanhcong";
+		 //    }
 
 			
 			$this->session->data['success'] = $this->language->get('text_success');
@@ -167,61 +167,61 @@ class ControllerAccountForgotten extends Controller {
 		$language -> load('account/forgotten');
 		$lang = $language -> data;
 	
-		if (!isset($this->request->post['email']) || $this->request->post['email'] == "") {
-			$this->error['warning'] = "Thông báo: ID không được tìm thấy trong hồ sơ của chúng tôi, vui lòng thử lại!";
-		} elseif (!$this->model_account_customer->getCustomerByUsername($this->request->post['email'])) {
-			$this->error['warning'] = "Thông báo: ID không được tìm thấy trong hồ sơ của chúng tôi, vui lòng thử lại!";
-		}
+		// if (!isset($this->request->post['email']) || $this->request->post['email'] == "") {
+		// 	$this->error['warning'] = "Thông báo: ID không được tìm thấy trong hồ sơ của chúng tôi, vui lòng thử lại!";
+		// } elseif (!$this->model_account_customer->getCustomerByUsername($this->request->post['email'])) {
+		// 	$this->error['warning'] = "Thông báo: ID không được tìm thấy trong hồ sơ của chúng tôi, vui lòng thử lại!";
+		// }
 
-		$api_url     = 'https://www.google.com/recaptcha/api/siteverify';
-		$site_key    = '6Lcm_iIUAAAAAJGRhY09TEmAX01wTF3_8mkZRJQF';
-		$secret_key  = '6Lcm_iIUAAAAAP_ps2_yc1d8gxJYx2yUVvDv7K6b';
-		if (!$_POST['g-recaptcha-response']) 
-		{
-			if ($_SERVER['REMOTE_ADDR'] != '127.0.0.1')
-			{
-				$this->error['warning'] = "Thông báo: Lỗi Capcha";
-			}
-		} 
-		else
-		{
-		   	$site_key_post    = $_POST['g-recaptcha-response'];
-		   if (!empty($_SERVER['HTTP_CLIENT_IP'])) 
-		   	{
-		        $remoteip = $_SERVER['HTTP_CLIENT_IP'];
-		   	} 
-		   	elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) 
-		   	{
-		        $remoteip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-		   	} 
-		   	else 
-		   	{
-		        $remoteip = $_SERVER['REMOTE_ADDR'];
-		    }
+		// $api_url     = 'https://www.google.com/recaptcha/api/siteverify';
+		// $site_key    = '6Lcm_iIUAAAAAJGRhY09TEmAX01wTF3_8mkZRJQF';
+		// $secret_key  = '6Lcm_iIUAAAAAP_ps2_yc1d8gxJYx2yUVvDv7K6b';
+		// if (!$_POST['g-recaptcha-response']) 
+		// {
+		// 	if ($_SERVER['REMOTE_ADDR'] != '127.0.0.1')
+		// 	{
+		// 		$this->error['warning'] = "Thông báo: Lỗi Capcha";
+		// 	}
+		// } 
+		// else
+		// {
+		//    	$site_key_post    = $_POST['g-recaptcha-response'];
+		//    if (!empty($_SERVER['HTTP_CLIENT_IP'])) 
+		//    	{
+		//         $remoteip = $_SERVER['HTTP_CLIENT_IP'];
+		//    	} 
+		//    	elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) 
+		//    	{
+		//         $remoteip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+		//    	} 
+		//    	else 
+		//    	{
+		//         $remoteip = $_SERVER['REMOTE_ADDR'];
+		//     }
 
-		    $api_url = $api_url.'?secret='.$secret_key.'&response='.$site_key_post.'&remoteip='.$remoteip;
-		    $response = file_get_contents($api_url);
-		    $response = json_decode($response);
-		    if(!isset($response->success))
-		    {
-		        $json['captcha'] = -1;
-		    }
-		    if($response->success == true)
-		    {
-		        $json['captcha'] = 1;
-		    }
-		    else
-		    {
-		        $json['captcha'] = -1;
-		    }
-		    if (intval($json['captcha']) === -1) 
-		    {
-		    	if ($_SERVER['REMOTE_ADDR'] != '127.0.0.1')
-				{
-		       		$this->error['warning'] = "Thông báo: Lỗi Capcha";
-		       	}
-		   	}
-		}
+		//     $api_url = $api_url.'?secret='.$secret_key.'&response='.$site_key_post.'&remoteip='.$remoteip;
+		//     $response = file_get_contents($api_url);
+		//     $response = json_decode($response);
+		//     if(!isset($response->success))
+		//     {
+		//         $json['captcha'] = -1;
+		//     }
+		//     if($response->success == true)
+		//     {
+		//         $json['captcha'] = 1;
+		//     }
+		//     else
+		//     {
+		//         $json['captcha'] = -1;
+		//     }
+		//     if (intval($json['captcha']) === -1) 
+		//     {
+		//     	if ($_SERVER['REMOTE_ADDR'] != '127.0.0.1')
+		// 		{
+		//        		$this->error['warning'] = "Thông báo: Lỗi Capcha";
+		//        	}
+		//    	}
+		// }
 
 		/*if (!isset($this->request->post['capcha']) || $this->request->post['capcha'] == "" || $this->request->post['capcha'] != $_SESSION['cap_code']) {
 			$this->error['warning'] = "Warning: Capcha fail!";
@@ -289,7 +289,7 @@ class ControllerAccountForgotten extends Controller {
 			    </table>
 			  </div>';
 			$mail -> setHtml($html_mail); 
-			$mail->send();
+			// $mail->send();
 			$json['ok'] = 1;
 			$this -> response -> setOutput(json_encode($json));
 		}

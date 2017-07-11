@@ -2,7 +2,7 @@
 <html>
    <!-- Mirrored from light.pinsupreme.com/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 19 May 2017 06:01:50 GMT -->
    <head>
-      <title>Quên mật khẩu - Tâm An Việt</title>
+      <title>Forgot Password - Halobig</title>
       <meta charset="utf-8">
       <meta content="ie=edge" http-equiv="x-ua-compatible">
       <meta content="template language" name="keywords">
@@ -25,21 +25,21 @@
       <div class="all-wrapper with-pattern">
          <div class="auth-box-w">
             <div class="logo-w" style="padding: 2%"><a href="index.html"><img alt="" src="catalog/view/theme/default/images/logo.png" style="width: 200px;"></a></div>
-            <h4 class="auth-header">Quên mật khẩu</h4>
+            <h4 class="auth-header">Forgot Password</h4>
             <form action="forgot.html" method="post">
                <div class="form-group">
-                  <label for="">Tên đăng nhập</label>
+                  <label for="">Username</label>
                   
-                  <input class="form-control" name="email" placeholder="Nhập tên đăng nhập" type="text">
+                  <input class="form-control" name="email" placeholder="Username" type="text">
                   <div class="pre-icon os-icon os-icon-user-male-circle"></div>
                </div>
                
-               <div class="form-group">
+              <!--  <div class="form-group">
                   <div  class="g-recaptcha" data-sitekey="6Lcm_iIUAAAAAJGRhY09TEmAX01wTF3_8mkZRJQF"></div>
 
-               </div>
+               </div> -->
                <div class="buttons-w">
-                  <button class="btn btn-primary">Quên mật khẩu</button>
+                  <button class="btn btn-primary">Submit</button>
                   <div class="form-check-inline"><label class="form-check-label"><a class="btn" href="<?php echo $back; ?>.html">GO BACK</a></div>
                </div>
                <br>
