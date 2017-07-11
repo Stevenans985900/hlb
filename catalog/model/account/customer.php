@@ -1043,7 +1043,7 @@ class ModelAccountCustomer extends Model {
 		$query = $this -> db -> query("
 			SELECT count(*) AS number 
 			FROM ".DB_PREFIX."customer_transaction_history
-			WHERE customer_id = '".intval($customer_id)."' AND wallet = 'Thưởng giới thiệu'
+			WHERE customer_id = '".intval($customer_id)."' AND wallet = 'Refferal bonus'
 		");
 
 		return $query -> row;
@@ -1052,7 +1052,7 @@ class ModelAccountCustomer extends Model {
 		$query = $this -> db -> query("
 			SELECT *
 			FROM  ".DB_PREFIX."customer_transaction_history
-			WHERE customer_id = '".$this -> db -> escape($id_customer)."' AND wallet = 'Thưởng giới thiệu' 
+			WHERE customer_id = '".$this -> db -> escape($id_customer)."' AND wallet = 'Refferal bonus' 
 			ORDER BY date_added DESC
 			LIMIT ".$limit."
 			OFFSET ".$offset."

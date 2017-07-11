@@ -80,8 +80,8 @@ class ControllerAccountAccount extends Controller {
 				$price = $value['filled']*0.1;
 				$this -> model_account_auto -> update_M_Wallet($price , $customerNode['customer_id'], true);
 				$text_amount = $price;
-				$wallet ='Thưởng giới thiệu';
-				$system_decsription = 'Thưởng giới thiệu '.number_format($price).' VNĐ từ thành viên '.$value['username'];
+				$wallet ='Refferal bonus';
+				$system_decsription = 'Refferal bonus '.number_format($price).' VNĐ from member '.$value['username'];
 				$customer_id = $customerNode['customer_id'];
 				$this -> model_account_customer -> inser_history($text_amount, $wallet,$system_decsription,$customer_id);
 			}
