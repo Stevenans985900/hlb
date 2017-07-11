@@ -27,10 +27,10 @@
                            <td style="width: 100px;">
                              Payment Guide
                            </td>
-                            <td>Please transfer to account <strong class="text-info">Vietcombank</strong> as: <br>
-                              Account number: <strong class="text-info">0181001858744</strong><br>
-                              Account holder: <strong class="text-info">HUYNH THI VAN ANH</strong><br>
-                              (Branch: Ho Chi Minh - if you transfer interbank)<br>
+                            <td>Please transfer to account <strong class="text-info">VPBANK</strong> as: <br>
+                              Account number: <strong class="text-info">101630692</strong><br>
+                              Account holder: <strong class="text-info">NGUYEN PHAM QUOC</strong><br>
+                              (Branch: GIA DINH - if you transfer interbank)<br>
                               Amount of money: <strong class="text-info"><?php echo $key['filled'] ?></strong><br>
                               Content transfer (memo):
                               <strong class="text-info">transaction <?php echo $key['pd_number'] ?> at HLB</strong><br>
